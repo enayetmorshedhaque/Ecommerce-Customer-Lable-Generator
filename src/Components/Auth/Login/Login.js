@@ -1,9 +1,12 @@
 import './Login.css';
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Link
+} from "react-router-dom";
 import { faFacebookF, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import LoginImage from '../../../Images/login.jpg'
-import { Link } from "react-router-dom";
 const Login = () => {
     return (
         <div className="container-fluid">
@@ -30,8 +33,10 @@ const Login = () => {
                                             <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                                         </div>
                                         <span className="ms-auto">
-                                            {/* <Link to="/forgot-password" className="text-decoration-none text-danger">Forgot Password?
-                                            </Link> */}
+                                            <Router>
+                                                <Link to="/forgot-password" className="text-decoration-none text-danger">Forgot Password?
+                                                </Link>
+                                            </Router>
                                         </span>
                                     </div>
                                     <div className="d-grid">
@@ -49,26 +54,20 @@ const Login = () => {
                                         <div className="social-login google">
                                             <FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>
                                         </div>
-                                        {/* <NavLink className="text-decoration-none text-dark">
-                                        </NavLink> */}
                                         <div className="social-login facebook">
                                             <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
                                         </div>
-                                        {/* <NavLink className="text-decoration-none text-dark">
-                                        </NavLink> */}
                                         <div className="social-login twitter">
                                             <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
                                         </div>
-                                        {/* <NavLink className="text-decoration-none text-dark">
-                                        </NavLink> */}
                                     </div>
                                 </div>
 
-                                {/* <div className="text-center mt-3">No Account?
-                                    <NavLink to="/registration" className="text-decoration-none text-danger">
+                                <div className="text-center mt-3">No Account?&nbsp;
+                                    <Link to="/registration" className="text-decoration-none text-danger">
                                         Create Now
-                                    </NavLink>
-                                </div> */}
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,10 @@
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Link
+} from "react-router-dom";
 import { faFacebookF, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import RegistrationImage from '../../../Images/sign-up.jpg'
 
@@ -22,19 +25,9 @@ const Registration = () => {
                                         <input type="password" className="form-control rounded-0" id="floatingPassword" placeholder="12345678"/>
                                         <label htmlFor="floatingPassword" className="form-label">Enter Your Password</label>
                                     </div>
-                                    <div className="d-flex mb-5 align-items-center">
-                                        <div className="form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                                            <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
-                                        </div>
-                                        <span className="ms-auto">
-                                            <a href="forgot-password.html"
-                                                className="text-decoration-none text-danger">Forgot Password?</a>
-                                        </span>
-                                    </div>
                                     <div className="d-grid">
                                         <button type="submit" className="btn btn-primary btn-lg rounded-0">
-                                            <small>Sign In</small>
+                                            <small>Sign Up</small>
                                         </button>
                                     </div>
                                 </form>
@@ -44,27 +37,24 @@ const Registration = () => {
                                 <hr/>
                                 <div className="social-sign-up-section d-grid">
                                     <div className="d-flex justify-content-center gap-lg-3 gap-sm-3">
-                                        {/* <NavLink to='/' className="text-decoration-none text-dark">
-                                            <div className="social-login google">
-                                                <FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>
-                                            </div>
-                                        </NavLink>
-                                        <NavLink to='/' className="text-decoration-none text-dark">
-                                            <div className="social-login facebook">
-                                                <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
-                                            </div>
-                                        </NavLink>
-                                        <NavLink to='/' className="text-decoration-none text-dark">
-                                            <div className="social-login twitter">
-                                                <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-                                            </div>
-                                        </NavLink> */}
+                                    <div className="social-login google">
+                                            <FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>
+                                        </div>
+                                        <div className="social-login facebook">
+                                            <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
+                                        </div>
+                                        <div className="social-login twitter">
+                                            <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="text-center mt-3">No Account? <NavLink to="/registration"
-                                        className="text-decoration-none text-danger">Create Now</NavLink></div>
-                            </div>
+                                <div className="text-center mt-3">Already have an Account? &nbsp;
+                                    <Link to="/" className="text-decoration-none text-danger">
+                                        Login Now
+                                    </Link>
+                                </div>
+                            </div>    
                         </div>
                     </div>
                     <div className="col-md-6">

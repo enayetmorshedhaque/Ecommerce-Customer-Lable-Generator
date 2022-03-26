@@ -1,5 +1,5 @@
 {
-  "name": "customer-label-generator",
+  "name": "ecommerce-customer-label-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

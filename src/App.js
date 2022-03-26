@@ -3,18 +3,23 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  NavLink,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Login from './Components/Auth/Login/Login';
 import Registration from './Components/Auth/Registration/Registration';
 
 function App() {
   return (
-    [
-      <Login></Login>
-    ]
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Login></Login>
+        </Route>
+        <Route path="/registration">
+          <Registration></Registration>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
