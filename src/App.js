@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import Login from './Components/Auth/Login/Login';
 import Registration from './Components/Auth/Registration/Registration';
+import ForgotPassword from './Components/Auth/ForgotPassword/ForgotPassword';
+import EmailSent from './Components/Auth/EmailSent/EmailSent';
+import NewPassword from './Components/Auth/NewPassword/NewPassword';
 
 function App() {
   return (
@@ -17,6 +20,15 @@ function App() {
         </Route>
         <Route path="/registration">
           <Registration></Registration>
+        </Route>
+        <Route path="/forgot-password">
+          <ForgotPassword></ForgotPassword>
+        </Route>
+        <Route path="/instruction-sent">
+          <EmailSent></EmailSent>
+        </Route>
+        <Route path="/new-password">
+          <NewPassword></NewPassword>
         </Route>
       </Switch>
     </Router>
