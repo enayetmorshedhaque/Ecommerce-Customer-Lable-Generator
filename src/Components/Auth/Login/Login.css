@@ -1,0 +1,57 @@
+/*-------------------------------------------
+|                                           |
+|         SOCIAL ICONS STYLE                |
+|                                           |
+-------------------------------------------*/
+
+.social-login {
+    height: 50px;
+    width: 50px;
+    border-radius: 15%;
+    border: 1px solid #e6e6e6 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google:hover {
+    background-color: #db3236;
+    transition: 0.5s;
+}
+
+.facebook:hover {
+    background-color: #3b5998;
+}
+
+.instagram:hover{
+    background-color: #FA8A39;
+}
+
+.twitter:hover {
+    background-color: #00acee;
+}
+
+.whatsapp:hover{
+    background-color: #25D366;
+}
+
+.youtube:hover{
+    background-color: #FF0000;
+}
+
+.google:hover,
+.facebook:hover,
+.twitter:hover {
+    color: white;
+}
+
+.facebook:hover i,
+.instagram:hover i,
+.whatsapp:hover i,
+.youtube:hover i{
+    color: white;
+}
+
+.fab {
+    font-size: 1rem;
+}
